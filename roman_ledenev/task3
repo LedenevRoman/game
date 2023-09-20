@@ -2,7 +2,7 @@ db.tracks.aggregate([
 {
     $group: {
         _id: null,
-        avg_duration: {$avg: 'duration_secs'},
+        avg_duration: {$avg: '$duration_secs'},
         total_tracks: {$count: {}}
     }
 },
